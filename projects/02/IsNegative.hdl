@@ -1,0 +1,17 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/And16.hdl
+
+/**
+ * converts a value to a bus. 
+ */
+
+CHIP IsNegative {
+    IN in[16];
+    OUT out;
+
+    PARTS:
+    Not(in=in[15], out=isntNegative);
+    Not(in=isntNegative, out=out);
+}

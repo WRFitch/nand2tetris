@@ -1,0 +1,17 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/And16.hdl
+
+/**
+ * copies a value, because this DL sucks. 
+ */
+
+CHIP Copy16 {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+    Not16(in=in, out=intermediary);
+    Not16(in=intermediary, out=out);
+}
